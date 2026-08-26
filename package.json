@@ -1,0 +1,34 @@
+{
+  "name": "@uploadkit/browser",
+  "version": "0.1.0",
+  "description": "Prepare images in the browser before uploading them to storage.",
+  "author": "Monish Peddapally",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monishpeddapally/uploadkit-browser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/monishpeddapally/uploadkit-browser/issues"
+  },
+  "homepage": "https://github.com/monishpeddapally/uploadkit-browser#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/*.test.js",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": ["upload", "image", "resize", "compress", "webp", "browser"],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
